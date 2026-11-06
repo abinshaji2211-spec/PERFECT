@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PERFECT | 24/7 Professional Services</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #071b30;
+    --blue: #0b9db5;
+    --cyan: #20c6d9;
+    --light: #f3f8fc;
+    --green: #12d477;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* HEADER */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--cyan);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--cyan);
+}
+
+/* LIVE STATUS */
+
+.live-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(18,212,119,.12);
+    color: var(--green);
+    border: 1px solid rgba(18,212,119,.3);
+    padding: 11px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    height: 10px;
+    width: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0%,100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(18,212,119,.6);
+    }
+    50% {
+        opacity: .4;
+        box-shadow: 0 0 0 8px rgba(18,212,119,0);
+    }
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    background:
+    radial-gradient(circle at 85% 40%, #087c9560, transparent 35%),
+    linear-gradient(130deg,#071b30,#103f5b);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "P";
+    position: absolute;
+    right: 8%;
+    bottom: -130px;
+    font-size: 500px;
+    font-weight: 900;
+    color: rgba(255,255,255,.025);
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 750px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(42px,6vw,75px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #c9dce9;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    background: var(--cyan);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* COMMON SECTIONS */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #728094;
+    margin-bottom: 45px;
+}
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid var(--cyan);
+    box-shadow: 0 5px 25px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #718094;
+    line-height: 1.7;
+    min-height: 75px;
+}
+
+.service-card a {
+    display: inline-block;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* WHY US */
+
+.why-us {
+    background: #e8f5f8;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin: 12px 0;
+}
+
+.feature p {
+    color: #718094;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* BOOKING */
+
+.booking {
+    background: var(--dark);
+    color: white;
+}
+
+.booking .subtitle {
+    color: #bdcedc;
+}
+
+.booking-form {
+    max-width: 650px;
+    background: white;
+    color: var(--dark);
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.booking-form label {
+    display: block;
+    font-weight: 700;
+    margin: 17px 0 8px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9e1e9;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: var(--blue);
+}
+
+.booking-form button {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+/* LOCATION */
+
+.location {
+    text-align: center;
+}
+
+.location-box {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px #0000000c;
+}
+
+.location-box h3 {
+    font-size: 24px;
+    margin: 18px 0;
+}
+
+.location-box p {
+    color: #728094;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #e8f5f8;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 20px auto;
+    color: #65768a;
+    line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px;
+    color: #63748a;
+}
+
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+
+footer {
+    background: #041323;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+footer span {
+    color: var(--cyan);
+}
+
+footer p {
+    color: #aebdcb;
+    font-size: 13px;
+    margin: 8px;
+}
+
+/* FLOATING WHATSAPP */
+
+.float-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #16c76c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 20px #0003;
+    z-index: 10;
+}
+
+/* MOBILE */
+
+@media(max-width:650px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 75px 7%;
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .booking-form {
+        padding: 23px;
+    }
+
+    .float-whatsapp {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">PERFECT<span>.</span></div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#about">ABOUT</a>
+        <a href="#booking">BOOK NOW</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="live-status">
+            <span class="live-dot"></span>
+            24/7 SERVICE AVAILABLE
+        </div>
+
+        <h1>
+            Reliable Service.<br>
+            <span>Perfect Solutions.</span>
+        </h1>
+
+        <p>
+            Your trusted partner for Water Tank Cleaning,
+            Electrical Maintenance and EV Two-Wheeler Service.
+            Professional service support, day and night.
+        </p>
+
+        <p>📍 Serving All Areas of Kozhikode District, Kerala</p>
+
+        <div class="hero-buttons">
+
+            <a href="#booking" class="btn">
+                BOOK A SERVICE
+            </a>
+
+            <a href="tel:8075695476" class="btn btn-outline">
+                CALL NOW
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <p class="subtitle">
+        Professional solutions for your everyday needs.
+    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+
+            <div class="service-icon">💧</div>
+
+            <h3>Water Tank Cleaning</h3>
+
+            <p>
+                Professional water tank cleaning,
+                hygienic maintenance and cleaning
+                solutions for homes and buildings.
+            </p>
+
+            <a href="#booking">Book Service →</a>
+
+        </div>
+
+        <div class="service-card">
+
+            <div class="service-icon">⚡</div>
+
+            <h3>Electrical Maintenance</h3>
+
+            <p>
+                Electrical repairs, wiring,
+                inspection and maintenance
+                by skilled technicians.
+            </p>
+
+            <a href="#booking">Book Service →</a>
+
+        </div>
+
+        <div class="service-card">
+
+            <div class="service-icon">🛵</div>
+
+            <h3>EV Two-Wheeler Service</h3>
+
+            <p>
+                Electric scooter servicing,
+                troubleshooting, inspection
+                and repair support.
+            </p>
+
+            <a href="#booking">Book Service →</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us">
+
+    <h2 class="section-title">Why Choose PERFECT?</h2>
+
+    <p class="subtitle">
+        Quality service with customer satisfaction.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="service-icon">🕒</div>
+            <h3>24/7 Support</h3>
+            <p>Service requests accepted day and night.</p>
+        </div>
+
+        <div class="feature">
+            <div class="service-icon">📍</div>
+            <h3>Wide Coverage</h3>
+            <p>Serving all areas of Kozhikode district.</p>
+        </div>
+
+        <div class="feature">
+            <div class="service-icon">🔧</div>
+            <h3>Professional Work</h3>
+            <p>Reliable maintenance and service solutions.</p>
+        </div>
+
+        <div class="feature">
+            <div class="service-icon">🤝</div>
+            <h3>Customer First</h3>
+            <p>Committed to quality and customer satisfaction.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+    <h2 class="section-title">Book Your Service</h2>
+
+    <p class="subtitle">
+        Fill in your details and send your booking request through WhatsApp.
+    </p>
+
+    <form class="booking-form" id="bookingForm">
+
+        <label>Your Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your 10-digit number"
+            pattern="[0-9]{10}"
+            required
+        >
+
+        <label>Select Service</label>
+
+        <select id="service" required>
+
+            <option value="">Choose your service</option>
+
+            <option>Water Tank Cleaning</option>
+
+            <option>Electrical Maintenance</option>
+
+            <option>EV Two-Wheeler Service</option>
+
+        </select>
+
+        <label>Preferred Date</label>
+
+        <input type="date" id="date" required>
+
+        <label>Preferred Time</label>
+
+        <input type="time" id="time" required>
+
+        <label>Your Location / Address</label>
+
+        <textarea
+            id="address"
+            rows="3"
+            placeholder="Enter your area and full address"
+            required
+        ></textarea>
+
+        <label>Additional Details</label>
+
+        <textarea
+            id="details"
+            rows="3"
+            placeholder="Describe your requirements (optional)"
+        ></textarea>
+
+        <button type="submit" class="btn">
+            BOOK SLOT ON WHATSAPP →
+        </button>
+
+    </form>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location">
+
+    <h2 class="section-title">Our Service Location</h2>
+
+    <p class="subtitle">
+        PERFECT – Your Local Service Partner
+    </p>
+
+    <div class="location-box">
+
+        <div class="service-icon">📍</div>
+
+        <h3>Kozhikode District, Kerala</h3>
+
+        <p>
+            We provide service support across all areas
+            of Kozhikode District.
+        </p>
+
+        <div class="live-status">
+            <span class="live-dot"></span>
+            OPEN 24 HOURS
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About PERFECT</h2>
+
+    <p>
+        PERFECT is dedicated to providing dependable
+        maintenance and service solutions. We specialize
+        in Water Tank Cleaning, Electrical Maintenance
+        and EV Two-Wheeler Service.
+
+        Our goal is to provide convenient, professional
+        and reliable services across Kozhikode district
+        with 24/7 service request support.
+    </p>
+
+    <div class="live-status">
+        <span class="live-dot"></span>
+        ALWAYS READY TO SERVE
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>Need assistance? We are just one call away.</p>
+
+    <p><strong>Phone:</strong> 8075695476</p>
+
+    <p><strong>Location:</strong> Kozhikode, Kerala</p>
+
+    <p><strong>Availability:</strong> 24/7 Service Requests</p>
+
+    <div class="contact-buttons">
+
+        <a href="tel:8075695476" class="btn">
+            CALL PERFECT
+        </a>
+
+        <a href="https://wa.me/918075695476"
+           target="_blank"
+           class="btn">
+            WHATSAPP US
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>PERFECT<span>.</span></h2>
+
+    <p>Reliable Service. Perfect Solutions.</p>
+
+    <p>24/7 Service Support | Kozhikode, Kerala</p>
+
+    <br>
+
+    <p>© 2026 PERFECT. All Rights Reserved.</p>
+
+    <p>Designed & Developed by ABIN ❤️</p>
+
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    href="https://wa.me/918075695476"
+    target="_blank"
+    class="float-whatsapp"
+>
+    WhatsApp Us
+</a>
+
+<!-- JAVASCRIPT BOOKING -->
+
+<script>
+
+const dateInput = document.getElementById("date");
+
+const today = new Date();
+
+const localDate = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+dateInput.min = localDate;
+
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+
+    const phone = document.getElementById("phone").value.trim();
+
+    const service = document.getElementById("service").value;
+
+    const date = document.getElementById("date").value;
+
+    const time = document.getElementById("time").value;
+
+    const address = document.getElementById("address").value.trim();
+
+    const details = document.getElementById("details").value.trim();
+
+    const message = `
+*PERFECT - NEW SERVICE BOOKING*
+
+*Customer Name:* ${name}
+
+*Customer Phone:* ${phone}
+
+*Service:* ${service}
+
+*Preferred Date:* ${date}
+
+*Preferred Time:* ${time}
+
+*Address:* ${address}
+
+*Additional Details:* ${details}
+
+Please confirm my booking.
+    `;
+
+    const whatsappURL =
+    "https://wa.me/918075695476?text=" +
+    encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
